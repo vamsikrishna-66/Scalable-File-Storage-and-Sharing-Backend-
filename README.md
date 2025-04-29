@@ -4,7 +4,7 @@ This project is a fully functional, scalable backend system for secure file stor
 
 It allows users to register, log in securely using JWT authentication, upload files to AWS S3, store metadata in MongoDB, share uploaded files with other users, and view or download files they own or that were shared with them.
 
-What This Project Does:
+## What This Project Does:
 
 Allows users to register and log in securely with hashed passwords and JSON Web Tokens
 
@@ -20,13 +20,13 @@ Lets users view or download files shared with them or uploaded by them
 
 All core routes are secured using middleware to validate JWTs
 
-How to Run the Project Locally:
+## How to Run the Project Locally:
 
 Clone the repository: git clone https://github.com/your-username/file-storage-backend.git cd file-storage-backend
 
 Install dependencies: npm install
 
-Create a .env file in the root directory with the following values:
+## Create a .env file in the root directory with the following values:
 
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/file_sharing_db
@@ -42,7 +42,7 @@ Start the backend server: npm run dev
 
 The backend will start on http://localhost:5000
 
-Folder Structure:
+## Folder Structure:
 
 app.js - Main app file
 .env - Your private environment variables
@@ -56,7 +56,7 @@ middlewares/authMiddleware.js - JWT verification middleware
 package.json - Project configuration and dependencies
 README.md - This documentation
 
-API Endpoints:
+## API Endpoints:
 
 Authentication: POST /api/auth/register - Register a new user
 POST /api/auth/login - Log in and receive a token
@@ -69,7 +69,7 @@ GET /api/files/:fileId - Access a file (only if owned or shared)
 
 All routes except /auth require Authorization: Bearer <token> in the header.
 
-Typical Usage Flow:
+## Typical Usage Flow:
 
 User registers via /api/auth/register
 
@@ -85,7 +85,7 @@ Recipient sees the file in /api/files/shared-with-me
 
 Both can view or download using /api/files/:fileId
 
-Technologies Used:
+## Technologies Used:
 
 Node.js and Express for backend logic
 
@@ -101,7 +101,7 @@ JSON Web Tokens (JWT) for authentication
 
 dotenv for configuration management
 
-Other Notes:
+## Other Notes:
 
 MongoDB must be running either locally or via MongoDB Atlas
 
